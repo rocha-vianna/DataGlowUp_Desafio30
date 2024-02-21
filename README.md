@@ -9,7 +9,7 @@ O desafio proposto foi analisar os dados de um e-commerce, entre Outubro/2019 e 
 2. [Análise Exploratória e Tratamento](#análise-exploratória-e-tratamento)
 3. [Insights Iniciais](#insights-iniciais)
 4. [Funcionalidades do Dashboard](#funcionalidades-do-dashboard)
-5. [Visual do Power BI](#visual-do-power-bi-:bar_chart:)
+5. [Visual do Power BI](#visual-do-power-bi)
 6. [Ferramentas externas](#ferramentas-externas)
 7. [Conclusão](#conclusão)
 8. [Expressões de gratidão](#expressões-de-gratidão)
@@ -108,7 +108,8 @@ O dashboard permite a seleção de filtros para personalizar a análise dos dado
 [Figma](https://www.figma.com/) - montagem do background do dashboard
 
 ---
-## Visual do Power BI 📊
+📊
+## Visual do Power BI
 
 [Dashboard](https://app.powerbi.com/view?r=eyJrIjoiMDdmZjQzZDItYjg3OS00OWNiLTk1YmMtY2I4NzljYmEwMGE2IiwidCI6IjBjN2IxYjM2LTllNjAtNDcwZi05ZGYxLTE4ZTgwOGY4Y2Y0NSJ9&pageName=ReportSection76c85a851218c2e06bb0)
 
