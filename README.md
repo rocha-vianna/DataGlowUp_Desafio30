@@ -9,7 +9,7 @@ O desafio proposto foi analisar os dados de um e-commerce, entre Outubro/2019 e 
 2. [Análise Exploratória e Tratamento](#análise-exploratória-e-tratamento)
 3. [Insights Iniciais](#insights-iniciais)
 4. [Funcionalidades do Dashboard](#funcionalidades-do-dashboard)
-5. [Visual do Power BI](#visual-do-power-bi)
+5. [Visual do Power BI](#visual-do-power-bi-:bar_chart:)
 6. [Ferramentas externas](#ferramentas-externas)
 7. [Conclusão](#conclusão)
 8. [Expressões de gratidão](#expressões-de-gratidão)
