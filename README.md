@@ -108,7 +108,7 @@ O dashboard permite a seleção de filtros para personalizar a análise dos dado
 [Figma](https://www.figma.com/) - montagem do background do dashboard
 
 ---
-## 📊 Visual do Power BI
+## Visual do Power BI 📊
 
 [Dashboard](https://app.powerbi.com/view?r=eyJrIjoiMDdmZjQzZDItYjg3OS00OWNiLTk1YmMtY2I4NzljYmEwMGE2IiwidCI6IjBjN2IxYjM2LTllNjAtNDcwZi05ZGYxLTE4ZTgwOGY4Y2Y0NSJ9&pageName=ReportSection76c85a851218c2e06bb0)
 
