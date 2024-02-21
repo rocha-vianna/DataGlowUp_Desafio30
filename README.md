@@ -1,3 +1,5 @@
+![logo_boutique_store](https://github.com/rocha-vianna/DataGlowUp_Desafio30/blob/main/images/logo.png)
+
 # Desafio 5DataGlowUp - Análise de dados de um e-commerce
 
 O desafio proposto foi analisar os dados de um e-commerce, entre Outubro/2019 e Fevereiro/2020.
