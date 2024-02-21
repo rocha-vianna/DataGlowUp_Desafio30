@@ -1,0 +1,49 @@
+Durante a análise, foi notado que havia 5 produtos com preço negativo.
+
+------------------------------------------------------------------------------------------------------------------------------
+Por não ter acesso ao autor para saber o motivo, perguntei ao ChatGPT o que poderia ser, e ele me respondeu abaixo:
+
+Um preço negativo em uma base de dados comerciais pode ter várias interpretações, dependendo do contexto específico em que ocorre. Aqui estão algumas possíveis explicações:
+
+1. **Erro de entrada de dados**: Um preço negativo pode ser resultado de um erro humano ao inserir dados na base. 
+Por exemplo, alguém pode ter digitado um número incorreto ou inserido um sinal de menos onde não deveria.
+
+2. **Descontos ou promoções**: Em certos casos, um preço negativo pode indicar que um desconto ou promoção foi aplicado ao preço original. 
+Por exemplo, se um produto tem um preço original de $100 e está sendo oferecido com um desconto de $20, o preço na base de dados pode aparecer como -$20 para indicar o desconto aplicado.
+
+3. **Devoluções ou créditos**: Em transações comerciais, às vezes os clientes podem devolver produtos ou receber créditos por diversos motivos, como insatisfação com o produto ou erros na entrega. 
+Nessas situações, o valor negativo pode representar o reembolso ou crédito dado ao cliente.
+
+4. **Contratos financeiros complexos**: Em mercados financeiros, especialmente em commodities, contratos futuros e opções, os preços podem se tornar negativos temporariamente devido a fatores como excesso de oferta, custos de armazenamento ou outras condições específicas do mercado.
+
+5. **Erros de cálculo ou interpretação**: Às vezes, um preço negativo pode ser simplesmente um erro de cálculo ou interpretação dos dados. Por exemplo, em certos sistemas de contabilidade, um débito pode ser erroneamente registrado como um crédito, resultando em valores negativos.
+
+Em resumo, um preço negativo em uma base de dados comerciais geralmente requer uma investigação mais aprofundada para determinar a causa subjacente e entender seu significado correto no contexto específico em que ocorreu.
+
+------------------------------------------------------------------------------------------------------------------------------
+Realizando a consulta abaixo, no PostgreSQL, foi verificado: 
+
+SELECT *
+FROM february
+WHERE user_id = '548835804'
+--and price < 0
+and data = '2020-02-22'
+order by hora;
+-- FORAM 4 COMPRAS DO PRODUTO "5670257" COM PREÇO -15,87 PELO MESMO CLIENTE, NO MESMO DIA E HORA
+-- SOMANDO TUDO, DÁ 0,60
+-- FORAM 9 PRODUTOS NO TOTAL, NESSA MESMA user_session
+-- SE '5670257' FOR DESCONTO, CLIENTE LEVOU 5 PRODUTOS QUE SAIRIAM A 64,08 POR 0,60 - LOGO NÃO DEVE SER DESCONTO
+
+------------------------------------------------------------------------------------------------------------------------------
+	SOMENTE 5 PRODUTOS POSSUEM PREÇO NEGATIVO EM TODOS OS MESES
+	
+PRODUCT_ID		PRICE
+5670257			-15,87
+5716855			- 7,94
+5716857			-23,81
+5716859			-47,62
+5716861			-79,37
+
+	PORTANTO, CONCLUO QUE ESSES PRODUTOS FORAM INSERIDOS COM ERRO DE DIGITAÇÃO - NÃO DEVERIAM TER O SINAL NEGATIVO.
+
+E por esse motivo, foi feito os updates que constam no arquivo 'update_negative_price.sql'
